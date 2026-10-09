@@ -1,0 +1,25 @@
+{
+  "mode": "mock",
+  "organization": "northstar-demo",
+  "generated_at": "2026-10-09T00:00:00+00:00",
+  "window_days": 90,
+  "repositories": [
+    {"name":"gateway","url":"https://example.invalid/gateway","visibility":"private","archived":false,"fork":false,"created_at":"2025-02-01T00:00:00Z","pushed_at":"2026-10-02T00:00:00Z","default_branch":"main"},
+    {"name":"design-system","url":"https://example.invalid/design-system","visibility":"internal","archived":false,"fork":false,"created_at":"2024-03-11T00:00:00Z","pushed_at":"2026-08-05T00:00:00Z","default_branch":"main"},
+    {"name":"legacy-api","url":"https://example.invalid/legacy-api","visibility":"private","archived":true,"fork":false,"created_at":"2022-01-01T00:00:00Z","pushed_at":"2024-04-08T00:00:00Z","default_branch":"master"}
+  ],
+  "members":["alexa-dev","morgan-ops","sam-platform"],
+  "outside_collaborators":["external-reviewer"],
+  "owners":["sam-platform"],
+  "grants":[
+    {"repo":"gateway","login":"alexa-dev","permission":"write","outside":false,"source":"collaborator","owner":false},
+    {"repo":"gateway","login":"sam-platform","permission":"admin","outside":false,"source":"collaborator","owner":true},
+    {"repo":"design-system","login":"external-reviewer","permission":"write","outside":true,"source":"collaborator","owner":false},
+    {"repo":"gateway","login":"platform-team","permission":"push","outside":false,"source":"team","owner":false}
+  ],
+  "advisories":[{"repo":"gateway","severity":"high","summary":"Synthetic dependency update review","package":"sample-parser","url":"","created_at":"2026-09-28T00:00:00Z"},{"repo":"design-system","severity":"moderate","summary":"Synthetic transitive dependency review","package":"ui-helper","url":"","created_at":"2026-08-30T00:00:00Z"}],
+  "contributions":[{"login":"alexa-dev","commits":8,"prs":2,"reviews":0},{"login":"morgan-ops","commits":1,"prs":0,"reviews":0}],
+  "recommendations":[{"repo":"design-system","login":"external-reviewer","permission":"write","severity":"medium","reason":"Elevated outside access with no recent contribution evidence","evidence":"0 observed commits, PRs, or reviews in the collection window","uncertainty":"Work may occur outside this repository or through non-code responsibilities.","action":"Confirm role, ownership, and business need with the repository owner before any permission change."}],
+  "warnings":[],
+  "notes":["Synthetic example only. No real organization or private data is included.","The dashboard never changes GitHub permissions."]
+}

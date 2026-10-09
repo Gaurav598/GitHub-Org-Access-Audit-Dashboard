@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "org-access-audit"
+version = "0.1.0"
+description = "Read-only GitHub organization access review and security dashboard"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+org-access-audit = "org_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
