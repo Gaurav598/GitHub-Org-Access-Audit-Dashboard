@@ -7,11 +7,10 @@ import os
 import sys
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from importlib.resources import files
 from .api import AuditAPIError, GitHubAPI
 from .collector import collect
 from .dashboard import render
-
-ROOT = Path(__file__).resolve().parents[2]
 
 
 def parser():
@@ -53,7 +52,7 @@ def main(argv=None):
                 server.serve_forever()
             return 0
         if args.command == "mock":
-            data = json.loads((ROOT / "demo" / "mock.json").read_text(encoding="utf-8"))
+            data = json.loads(files("org_audit").joinpath("data/mock.json").read_text(encoding="utf-8"))
         else:
             if not args.org:
                 raise ValueError("GITHUB_ORG or --org is required for live collection")

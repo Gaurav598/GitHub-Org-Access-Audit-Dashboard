@@ -35,7 +35,7 @@ python3 -m org_audit mock --out out
 python3 -m org_audit serve --out out
 ```
 
-Open `http://127.0.0.1:8765/dashboard.html`, or open `out/dashboard.html` directly. The mock organization `northstar-demo` and its people are fictional.
+Open `http://127.0.0.1:8765/dashboard.html`, or open `out/dashboard.html` directly. The bundled `src/org_audit/data/mock.json` organization `northstar-demo` and its people are fictional.
 
 ## Authorized live mode
 
